@@ -35,25 +35,25 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-[#f5f1eb]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="services" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-[#f5f1eb]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <p className="text-[#dda15e] text-sm tracking-[0.3em] uppercase mb-4">Services</p>
-          <h2 className="text-4xl md:text-5xl font-light text-[#3d405b] mb-6">How I Can Help You</h2>
-          <div className="w-16 h-px bg-[#606c38] mx-auto mb-6" />
-          <p className="max-w-2xl mx-auto text-[#5c5c5c]">
+          <p className="text-[#dda15e] text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4">Services</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#3d405b] mb-4 sm:mb-6 px-4">How I Can Help You</h2>
+          <div className="w-16 h-px bg-[#606c38] mx-auto mb-4 sm:mb-6" />
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#5c5c5c] px-4">
             Choose the practice setting that resonates with your lifestyle and preferences. 
             Both options deliver the same quality of instruction and transformative experience.
           </p>
         </motion.div>
 
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -61,7 +61,7 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
+              className={`grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
             >
@@ -76,43 +76,43 @@ export default function ServicesSection() {
                 </div>
                 {/* Floating badge */}
                 <motion.div 
-                  className="absolute -bottom-4 left-6 right-6 md:left-8 md:right-auto md:max-w-xs bg-white rounded-xl shadow-lg p-4"
+                  className="absolute -bottom-3 sm:-bottom-4 left-4 right-4 sm:left-6 sm:right-6 md:left-8 md:right-auto md:max-w-xs bg-white rounded-xl shadow-lg p-3 sm:p-4"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, duration: 0.5 }}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3">
                     <div 
-                      className="w-10 h-10 rounded-full flex items-center justify-center"
+                      className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: `${service.accent}15` }}
                     >
-                      <service.icon className="w-5 h-5" style={{ color: service.accent }} />
+                      <service.icon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: service.accent }} />
                     </div>
                     <div>
-                      <p className="font-medium text-[#3d405b] text-sm">{service.subtitle}</p>
+                      <p className="font-medium text-[#3d405b] text-xs sm:text-sm">{service.subtitle}</p>
                     </div>
                   </div>
                 </motion.div>
               </div>
 
               {/* Content */}
-              <div className={`pt-8 lg:pt-0 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <h3 className="text-3xl font-light text-[#3d405b] mb-4">{service.title}</h3>
-                <p className="text-[#5c5c5c] leading-relaxed mb-8">{service.description}</p>
+              <div className={`pt-6 sm:pt-8 lg:pt-0 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <h3 className="text-2xl sm:text-3xl font-light text-[#3d405b] mb-3 sm:mb-4">{service.title}</h3>
+                <p className="text-sm sm:text-base text-[#5c5c5c] leading-relaxed mb-6 sm:mb-8">{service.description}</p>
                 
-                <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                   {service.features.map((feature) => (
-                    <div key={feature.text} className="flex items-center gap-3">
-                      <feature.icon className="w-4 h-4" style={{ color: service.accent }} />
-                      <span className="text-sm text-[#5c5c5c]">{feature.text}</span>
+                    <div key={feature.text} className="flex items-center gap-2 sm:gap-3">
+                      <feature.icon className="w-4 h-4 flex-shrink-0" style={{ color: service.accent }} />
+                      <span className="text-xs sm:text-sm text-[#5c5c5c]">{feature.text}</span>
                     </div>
                   ))}
                 </div>
 
                 <a 
                   href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
                   style={{ 
                     backgroundColor: service.accent, 
                     color: 'white',

@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-[#3d405b] relative overflow-hidden">
+    <section id="testimonials" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-[#3d405b] relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -61,16 +61,16 @@ export default function TestimonialsSection() {
         }} />
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <p className="text-[#dda15e] text-sm tracking-[0.3em] uppercase mb-4">Testimonials</p>
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-6">What Students Say</h2>
+          <p className="text-[#dda15e] text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4">Testimonials</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-4 sm:mb-6">What Students Say</h2>
           <div className="w-16 h-px bg-[#606c38] mx-auto" />
         </motion.div>
 
@@ -83,30 +83,30 @@ export default function TestimonialsSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl"
+              className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl"
             >
-              <Quote className="w-12 h-12 text-[#606c38]/20 mb-6" />
+              <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#606c38]/20 mb-4 sm:mb-6" />
               
-              <p className="text-lg md:text-xl text-[#5c5c5c] leading-relaxed mb-8 italic">
+              <p className="text-base sm:text-lg md:text-xl text-[#5c5c5c] leading-relaxed mb-6 sm:mb-8 italic">
                 "{testimonials[currentIndex].content}"
               </p>
 
-              <div className="flex items-center justify-between flex-wrap gap-4">
-                <div className="flex items-center gap-4">
+              <div className="flex items-center justify-between flex-wrap gap-3 sm:gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <img 
                     src={testimonials[currentIndex].image} 
                     alt={testimonials[currentIndex].name}
-                    className="w-14 h-14 rounded-full object-cover ring-2 ring-[#606c38]/20"
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover ring-2 ring-[#606c38]/20"
                   />
                   <div>
-                    <p className="font-medium text-[#3d405b]">{testimonials[currentIndex].name}</p>
-                    <p className="text-sm text-[#8b8b8b]">{testimonials[currentIndex].role}</p>
+                    <p className="font-medium text-sm sm:text-base text-[#3d405b]">{testimonials[currentIndex].name}</p>
+                    <p className="text-xs sm:text-sm text-[#8b8b8b]">{testimonials[currentIndex].role}</p>
                   </div>
                 </div>
                 
                 <div className="flex gap-1">
                   {Array.from({ length: testimonials[currentIndex].rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#dda15e] text-[#dda15e]" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-[#dda15e] text-[#dda15e]" />
                   ))}
                 </div>
               </div>
@@ -114,31 +114,34 @@ export default function TestimonialsSection() {
           </AnimatePresence>
 
           {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
             <button 
               onClick={prevTestimonial}
-              className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+              aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             
-            <div className="flex gap-2">
+            <div className="flex gap-1.5 sm:gap-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? 'bg-[#dda15e] w-6' : 'bg-white/30 hover:bg-white/50'
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentIndex ? 'bg-[#dda15e] w-4 sm:w-6' : 'bg-white/30 hover:bg-white/50 w-2'
                   }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
             </div>
             
             <button 
               onClick={nextTestimonial}
-              className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+              aria-label="Next testimonial"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>

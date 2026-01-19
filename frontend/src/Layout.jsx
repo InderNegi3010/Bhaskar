@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from './utils';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function Layout({ children, currentPageName }) {
+export default function Layout({ children }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -66,19 +64,19 @@ export default function Layout({ children, currentPageName }) {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <a 
             href="#" 
             className={`flex items-center gap-2 transition-colors ${
               scrolled ? 'text-[#3d405b]' : 'text-[#3d405b]'
             }`}
           >
-            <span className="text-2xl text-[#dda15e]">ॐ</span>
-            <span className="font-light text-lg tracking-wide">Bhaskar Singh</span>
+            <span className="text-xl sm:text-2xl text-[#dda15e]">ॐ</span>
+            <span className="font-light text-base sm:text-lg tracking-wide">Bhaskar Singh</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -92,7 +90,7 @@ export default function Layout({ children, currentPageName }) {
             ))}
             <a
               href="#contact"
-              className="px-5 py-2 bg-[#606c38] text-white rounded-full text-sm tracking-wide hover:bg-[#4a5429] transition-colors"
+              className="px-4 lg:px-5 py-2 bg-[#606c38] text-white rounded-full text-sm tracking-wide hover:bg-[#4a5429] transition-colors"
             >
               Book Now
             </a>
@@ -102,6 +100,7 @@ export default function Layout({ children, currentPageName }) {
           <button 
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6 text-[#3d405b]" />

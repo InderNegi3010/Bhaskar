@@ -16,17 +16,17 @@ export default function HeroSection() {
       
       {/* Decorative circles */}
       <motion.div 
-        className="absolute top-20 right-20 w-64 h-64 rounded-full bg-[#a3b18a]/10 blur-3xl"
+        className="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 rounded-full bg-[#a3b18a]/10 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div 
-        className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-[#dda15e]/10 blur-3xl"
+        className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 rounded-full bg-[#dda15e]/10 blur-3xl"
         animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 sm:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function HeroSection() {
         >
           {/* Sanskrit Om symbol */}
           <motion.p 
-            className="text-6xl mb-6 text-[#606c38]/60"
+            className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 text-[#606c38]/60"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -42,43 +42,43 @@ export default function HeroSection() {
             ॐ
           </motion.p>
           
-          <h1 className="font-light text-5xl md:text-7xl lg:text-8xl text-[#3d405b] tracking-tight mb-6">
+          <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#3d405b] tracking-tight mb-4 sm:mb-6">
             Bhaskar Singh
           </h1>
           
-          <p className="text-lg md:text-xl text-[#606c38] font-medium tracking-[0.3em] uppercase mb-8">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#606c38] font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-6 sm:mb-8">
             Yoga Teacher & Wellness Guide
           </p>
           
           <motion.blockquote 
-            className="max-w-2xl mx-auto mb-12"
+            className="max-w-2xl mx-auto mb-8 sm:mb-12 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <p className="text-xl md:text-2xl text-[#5c5c5c] font-light italic leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5c5c5c] font-light italic leading-relaxed">
               "Yoga is the journey of the self, through the self, to the self."
             </p>
-            <cite className="text-sm text-[#8b8b8b] mt-4 block not-italic">
+            <cite className="text-xs sm:text-sm text-[#8b8b8b] mt-3 sm:mt-4 block not-italic">
               — The Bhagavad Gita
             </cite>
           </motion.blockquote>
 
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             <a 
               href="#contact"
-              className="px-8 py-4 bg-[#606c38] text-white rounded-full text-sm tracking-wider uppercase hover:bg-[#4a5429] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#606c38] text-white rounded-full text-sm tracking-wider uppercase hover:bg-[#4a5429] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Book a Session
             </a>
             <a 
               href="#services"
-              className="px-8 py-4 border border-[#606c38]/30 text-[#606c38] rounded-full text-sm tracking-wider uppercase hover:bg-[#606c38]/5 transition-all duration-300"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-[#606c38]/30 text-[#606c38] rounded-full text-sm tracking-wider uppercase hover:bg-[#606c38]/5 transition-all duration-300"
             >
               Explore Services
             </a>
@@ -88,9 +88,10 @@ export default function HeroSection() {
         {/* Scroll indicator */}
         <motion.button
           onClick={scrollToAbout}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[#606c38]/50 hover:text-[#606c38] transition-colors"
+          className="hidden sm:block absolute bottom-10 left-1/2 -translate-x-1/2 text-[#606c38]/50 hover:text-[#606c38] transition-colors"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          aria-label="Scroll to about section"
         >
           <ChevronDown size={32} />
         </motion.button>
