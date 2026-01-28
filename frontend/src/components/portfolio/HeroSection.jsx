@@ -1,56 +1,59 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import React from "react";
+import { motion as Motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#f5f1eb] via-[#e8e4dc] to-[#d4cfc4]">
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }} />
-      
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
+
       {/* Decorative circles */}
-      <motion.div 
+      <Motion.div
         className="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 rounded-full bg-[#a3b18a]/10 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.div 
+      <Motion.div
         className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 rounded-full bg-[#dda15e]/10 blur-3xl"
         animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 sm:pt-24">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
           {/* Sanskrit Om symbol */}
-          <motion.p 
+          <Motion.p
             className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 text-[#606c38]/60"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             ॐ
-          </motion.p>
-          
+          </Motion.p>
+
           <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#3d405b] tracking-tight mb-4 sm:mb-6">
             Bhaskar Singh
           </h1>
-          
+
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#606c38] font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-6 sm:mb-8">
-            Yoga Teacher & Wellness Guide
+            Yoga Instructor & Wellness Guide
           </p>
-          
-          <motion.blockquote 
+
+          <Motion.blockquote
             className="max-w-2xl mx-auto mb-8 sm:mb-12 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -62,31 +65,31 @@ export default function HeroSection() {
             <cite className="text-xs sm:text-sm text-[#8b8b8b] mt-3 sm:mt-4 block not-italic">
               — The Bhagavad Gita
             </cite>
-          </motion.blockquote>
+          </Motion.blockquote>
 
-          <motion.div 
+          <Motion.div
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            <a 
+            <a
               href="#contact"
               className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#606c38] text-white rounded-full text-sm tracking-wider uppercase hover:bg-[#4a5429] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Book a Session
             </a>
-            <a 
+            <a
               href="#services"
               className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-[#606c38]/30 text-[#606c38] rounded-full text-sm tracking-wider uppercase hover:bg-[#606c38]/5 transition-all duration-300"
             >
               Explore Services
             </a>
-          </motion.div>
-        </motion.div>
+          </Motion.div>
+        </Motion.div>
 
         {/* Scroll indicator */}
-        <motion.button
+        <Motion.button
           onClick={scrollToAbout}
           className="hidden sm:block absolute bottom-10 left-1/2 -translate-x-1/2 text-[#606c38]/50 hover:text-[#606c38] transition-colors"
           animate={{ y: [0, 10, 0] }}
@@ -94,7 +97,7 @@ export default function HeroSection() {
           aria-label="Scroll to about section"
         >
           <ChevronDown size={32} />
-        </motion.button>
+        </Motion.button>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -120,7 +120,7 @@
 @layer base {
   * {
     border-color: var(--color-border);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
   *:focus-visible {
     outline-color: var(--color-ring);
@@ -128,10 +128,12 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    overflow-x: hidden;
   }
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
