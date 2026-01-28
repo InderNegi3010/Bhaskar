@@ -24,34 +24,6 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen bg-[#f5f1eb]">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-        
-        * {
-          font-family: 'Inter', sans-serif;
-        }
-        
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        ::-webkit-scrollbar {
-          width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-          background: #f5f1eb;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background: #606c38;
-          border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-          background: #4a5429;
-        }
-      `}</style>
 
       {/* Navigation */}
       <motion.header
@@ -67,9 +39,7 @@ export default function Layout({ children }) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <a 
             href="#" 
-            className={`flex items-center gap-2 transition-colors ${
-              scrolled ? 'text-[#3d405b]' : 'text-[#3d405b]'
-            }`}
+            className="flex items-center gap-2 transition-colors text-[#3d405b]"
           >
             <span className="text-xl sm:text-2xl text-[#dda15e]">ॐ</span>
             <span className="font-light text-base sm:text-lg tracking-wide">Bhaskar Singh</span>
@@ -81,9 +51,7 @@ export default function Layout({ children }) {
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm tracking-wide transition-colors hover:text-[#606c38] ${
-                  scrolled ? 'text-[#5c5c5c]' : 'text-[#5c5c5c]'
-                }`}
+                className="text-sm tracking-wide transition-colors hover:text-[#606c38] text-[#5c5c5c]"
               >
                 {link.label}
               </a>

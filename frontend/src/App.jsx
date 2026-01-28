@@ -10,7 +10,7 @@ import Footer from "./components/portfolio/Footer";
 
 export default function App() {
   return (
-    <Layout currentPageName="Home">
+    <Layout>
       <div className="min-h-screen">
         <HeroSection />
         <AboutSection />
