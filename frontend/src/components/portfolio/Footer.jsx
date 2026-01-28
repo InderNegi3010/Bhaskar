@@ -3,8 +3,8 @@ import { Heart, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   // Replace these with your actual social media links
-  const INSTAGRAM_URL = "https://www.instagram.com/your_instagram_handle";
-  const FACEBOOK_URL = "https://www.facebook.com/your_facebook_page";
+  const INSTAGRAM_URL = "https://www.instagram.com/yogibhaskar0777/";
+  const FACEBOOK_URL = "https://www.facebook.com/share/1JtKh7gDw1/";
 
   return (
     <footer className="bg-[#3d405b] text-white py-10 sm:py-12">

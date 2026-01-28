@@ -15,7 +15,7 @@ export default function ServicesSection() {
         { icon: MapPin, text: "No commute required" },
         { icon: Sparkles, text: "Customized sequences" },
       ],
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      image: "/image2.jpg",
       accent: "#606c38",
     },
     {
@@ -29,7 +29,7 @@ export default function ServicesSection() {
         { icon: Clock, text: "Regular schedules" },
         { icon: MapPin, text: "Peaceful environment" },
       ],
-      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80",
+      image: "/image1.jpg",
       accent: "#dda15e",
     },
   ];

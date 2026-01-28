@@ -24,9 +24,8 @@ export default function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
-    { icon: Mail, label: "Email", value: "bhaskar.yoga@email.com", href: "mailto:bhaskar.yoga@email.com" },
-    { icon: MapPin, label: "Yoga Center", value: "123 Wellness Street, Peace Nagar", href: "#" },
+    { icon: Phone, label: "Phone", value: "+91 9389652307", href: "tel:+91 9389652307" },
+    { icon: Mail, label: "Email", value: "yogibhaskar0777@gmail.com", href: "mailto:yogibhaskar0777@gmail.com" },
     { icon: Clock, label: "Available", value: "Mon-Sat: 6AM - 8PM", href: null },
   ];
 
@@ -86,15 +85,7 @@ export default function ContactSection() {
                 </p>
               </div>
             </div>
-
-            {/* Map placeholder */}
-            <div className="aspect-video rounded-2xl overflow-hidden bg-[#e8e4dc] hidden lg:block">
-              <img 
-                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80"
-                alt="Location"
-                className="w-full h-full object-cover opacity-80"
-              />
-            </div>
+            
           </motion.div>
 
           {/* Contact Form */}

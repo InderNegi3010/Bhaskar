@@ -5,7 +5,7 @@ import { GraduationCap, Users, Heart, Leaf } from 'lucide-react';
 export default function AboutSection() {
   const highlights = [
     { icon: GraduationCap, label: "Post-Graduate in Yoga", desc: "Advanced academic foundation" },
-    { icon: Users, label: "50+ Students Taught", desc: "Transforming lives through yoga" },
+    { icon: Users, label: "1000+ Students Taught", desc: "Transforming lives through yoga" },
     { icon: Heart, label: "Personalized Approach", desc: "Tailored sessions for every individual" },
     { icon: Leaf, label: "Holistic Wellness", desc: "Mind, body & spirit integration" },
   ];
@@ -36,7 +36,7 @@ export default function AboutSection() {
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-[#f5f1eb]">
               <img 
-                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80" 
+                src="/profile.jpg" 
                 alt="Yoga practice"
                 className="w-full h-full object-cover"
               />
@@ -65,7 +65,7 @@ export default function AboutSection() {
                 commitment to helping others discover their own path to wellness.
               </p>
               <p>
-                Having successfully guided <strong className="text-[#606c38] font-medium">over 50 students</strong> 
+                Having successfully guided <strong className="text-[#606c38] font-medium">over 50 students </strong> 
                 on their yoga journeys, I understand that each individual is unique. Whether you're a complete 
                 beginner seeking stress relief or an experienced practitioner looking to deepen your practice, 
                 I create personalized sessions that honor your body's wisdom.

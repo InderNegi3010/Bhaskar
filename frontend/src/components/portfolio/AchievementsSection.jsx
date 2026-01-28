@@ -7,7 +7,7 @@ export default function AchievementsSection() {
     {
       icon: GraduationCap,
       title: "Post-Graduate in Yoga",
-      institution: "Recognized University",
+      institution: "kumaun University",
       description: "Advanced studies in yoga philosophy, anatomy, and teaching methodology"
     },
     {
@@ -25,9 +25,9 @@ export default function AchievementsSection() {
   ];
 
   const achievements = [
-    { number: "50+", label: "Students Taught", icon: Star },
+    { number: "1000+", label: "Students Taught", icon: Star },
     { number: "5+", label: "Years Experience", icon: Medal },
-    { number: "1000+", label: "Sessions Conducted", icon: CheckCircle2 },
+    { number: "3000+", label: "Sessions Conducted", icon: CheckCircle2 },
     { number: "100%", label: "Student Satisfaction", icon: Award },
   ];
 
